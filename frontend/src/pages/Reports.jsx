@@ -124,7 +124,7 @@ const Reports = () => {
         {/* Back Button */}
         <button
           onClick={handleBack}
-          className="bg-blue-500 text-white py-2 px-4 rounded mb-4"
+          className="bg-blue-500 text-white py-2 px-4 rounded mb-4 hover:bg-gray-200"
         >
           Back to Dashboard
         </button>

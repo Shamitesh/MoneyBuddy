@@ -51,7 +51,26 @@ const Dashboard = () => {
           setTransactions(
             data.filter((t) => new Date(t.date).toDateString() === today.toDateString())
           );
-        } else if (filter === "lastWeek") {
+        } else if (filter === "thisWeek") {
+          const today = new Date();
+          const thisWeekStart = new Date(today);
+          const thisWeekEnd = new Date(today);
+        
+          // Set lastWeekStart to the previous Monday
+          thisWeekStart.setDate(today.getDate() - today.getDay()); // Monday of this week
+          thisWeekStart.setHours(0, 0, 0, 0); // Normalize time to midnight
+        
+          // Set lastWeekEnd to the previous Sunday
+          thisWeekEnd.setDate(today.getDate() - today.getDay() +6); // Sunday of this week
+          thisWeekEnd.setHours(23, 59, 59, 999); // Set to the end of the day
+        
+          setTransactions(
+            data.filter((t) => {
+              const transactionDate = new Date(t.date);
+              return transactionDate >= thisWeekStart && transactionDate <= thisWeekEnd;
+            })
+          );
+        }else if (filter === "lastWeek") {
           const today = new Date();
           const lastWeekStart = new Date(today);
           const lastWeekEnd = new Date(today);
@@ -231,6 +250,7 @@ const handleAddTransaction = async (e) => {
         >
           <option value="all">All</option>
           <option value="today">Today</option>
+          <option value="thisWeek">This Week</option>
           <option value="lastWeek">Last Week</option>
           <option value="lastMonth">Last Month</option>
         </select>
