@@ -1,7 +1,6 @@
-import React from "react";
+
 import {
   FaMoneyBillWave,
-  FaRegCalendarAlt,
   FaSignInAlt,
   FaList,
   FaChartPie,
