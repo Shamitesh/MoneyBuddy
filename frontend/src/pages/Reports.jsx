@@ -24,7 +24,7 @@ const Reports = () => {
   useEffect(() => {
     const fetchTransactions = async () => {
       try {
-        const response = await axios.get('http://localhost:8000/api/v1/transactions/lists', {
+        const response = await axios.get('https://moneybuddy.onrender.com/api/v1/transactions/lists', {
           headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
         });
         const data = response.data;

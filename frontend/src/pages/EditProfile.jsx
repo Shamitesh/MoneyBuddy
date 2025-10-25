@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import  { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
@@ -12,7 +12,7 @@ const EditProfile = () => {
   useEffect(() => {
     const fetchProfile = async () => {
       try {
-        const response = await axios.get('http://localhost:8000/api/v1/users/profile', {
+        const response = await axios.get('https://moneybuddy.onrender.com/api/v1/users/profile', {
           headers: { 'Authorization': `Bearer ${localStorage.getItem('token')}` },
         });
         setUser(response.data);
@@ -30,7 +30,7 @@ const EditProfile = () => {
   const handleSaveClick = async () => {
     try {
       const response = await axios.put(
-        'http://localhost:8000/api/v1/users/update-profile',
+        'https://moneybuddy.onrender.com/api/v1/users/update-profile',
         { newUsername, newEmail },
         {
           headers: {

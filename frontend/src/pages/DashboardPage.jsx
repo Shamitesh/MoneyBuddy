@@ -36,7 +36,7 @@ const Dashboard = () => {
     const fetchTransactions = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:8000/api/v1/transactions/lists",
+          "https://moneybuddy.onrender.com/api/v1/transactions/lists",
           {
             headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
           }
@@ -143,7 +143,7 @@ const handleAddTransaction = async (e) => {
   try {
     // Send the request to create the transaction
     const response = await axios.post(
-      "http://localhost:8000/api/v1/transactions/create",
+      "https://moneybuddy.onrender.com/api/v1/transactions/create",
       transactionData,
       {
         headers: {
@@ -183,7 +183,7 @@ const handleAddTransaction = async (e) => {
     try {
       // Make the DELETE request
       const response = await axios.delete(
-        `http://localhost:8000/api/v1/transactions/${transactionId}`,
+        `https://moneybuddy.onrender.com/api/v1/transactions/${transactionId}`,
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`, // Ensure the token is passed

@@ -107,14 +107,14 @@ const HeroSection = () => {
           <div className="bg-white p-6 rounded-lg shadow-lg">
             <FaQuoteLeft className="text-xl text-gray-400" />
             <p className="mt-4">
-              "This app has revolutionized the way I track my expenses. Highly intuitive and user-friendly."
+              &ldquo;This app has revolutionized the way I track my expenses. Highly intuitive and user-friendly.&ldquo;
             </p>
             <p className="mt-4 font-bold">- Jane Doe</p>
           </div>
           <div className="bg-white p-6 rounded-lg shadow-lg">
             <FaQuoteLeft className="text-xl text-gray-400" />
             <p className="mt-4">
-              "Finally, a hassle-free way to manage my finances. The insights feature is a game changer!"
+              &ldquo;Finally, a hassle-free way to manage my finances. The insights feature is a game changer!&quot;
             </p>
             <p className="mt-4 font-bold">- John Smith</p>
           </div>

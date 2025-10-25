@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import  { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
@@ -10,7 +10,7 @@ const Profile = () => {
   useEffect(() => {
     const fetchProfile = async () => {
       try {
-        const response = await axios.get('http://localhost:8000/api/v1/users/profile', {
+        const response = await axios.get('https://moneybuddy.onrender.com/api/v1/users/profile', {
           headers: {
             'Authorization': `Bearer ${localStorage.getItem('token')}`,
           },

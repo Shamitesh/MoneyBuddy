@@ -17,7 +17,7 @@ const Register = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:8000/api/v1/users/register", // Ensure the correct API URL
+        "https://moneybuddy.onrender.com/api/v1/users/register", // Ensure the correct API URL
         formData
       );
       console.log("Registration successful", response.data);

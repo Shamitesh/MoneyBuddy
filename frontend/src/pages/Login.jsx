@@ -16,7 +16,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:8000/api/v1/users/login', formData);
+      const response = await axios.post('https://moneybuddy.onrender.com/api/v1/users/login', formData);
       localStorage.setItem('token', response.data.token);
       navigate('/dashboard');  // Navigate to dashboard or home page after success
     } catch (error) {
@@ -66,7 +66,7 @@ const Login = () => {
         {/* Sign Up Link */}
         <div className="text-center mt-6">
           <p className="text-sm text-gray-600">
-            Don't have an account?{' '}
+            Don&apos;t have an account?{' '}
             <a href="/register" className="text-indigo-600 hover:text-indigo-700 font-semibold">
               Sign up here
             </a>

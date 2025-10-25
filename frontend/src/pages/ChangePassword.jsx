@@ -20,7 +20,7 @@ const ChangePassword = () => {
     try {
       // Make the API request to change password
       const response = await axios.put(
-        'http://localhost:8000/api/v1/users/change-password', 
+        'https://moneybuddy.onrender.com/api/v1/users/change-password', 
         { currentPassword, newPassword },
         {
           headers: {
