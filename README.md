@@ -39,3 +39,6 @@ MongoDB
 
 Authentication:
 JWT (JSON Web Tokens)
+to test login 
+email - test@gmail.com
+password - test123
